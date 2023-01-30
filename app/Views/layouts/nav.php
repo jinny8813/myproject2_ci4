@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="<?= base_url('../../public/assets/css/styles/style.css') ?>" />
+    <link rel="shortcut icon" href="<?= base_url('../../public/assets/images/icon.png') ?>" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -24,7 +25,7 @@
     <nav class="navbar">
       <div class="img_h">
         <a class="navbar-brand px-5 py-3" href="./index.php"
-          ><img src="./images/beluga.png" class="h-100 px-2" />BluegaJournal 白鯨嶼 
+          ><img src="<?= base_url('../../public/assets/images/icon.png') ?>" class="h-100 px-2" />BluegaJournal 白鯨嶼 
         </a>
       </div>
       <ul class="nav justify-content-end">

@@ -79,12 +79,12 @@
             <p class="lh-sm"><a href="#">更多聯絡資訊</a></p>
             <p class="lh-sm"><a href="#">關注我們吧</a></p>
             <div class="img_h">
-              <a href="#"><img class="mh-100" src="./images/facebook.png" /></a>
+              <a href="#"><img class="mh-100" src="<?= base_url('../../public/assets/images/facebook.png') ?>" /></a>
               <a href="#"
-                ><img class="mh-100" src="./images/instagram.png"
+                ><img class="mh-100" src="<?= base_url('../../public/assets/images/instagram.png') ?>"
               /></a>
-              <a href="#"><img class="mh-100" src="./images/twitter.png" /></a>
-              <a href="#"><img class="mh-100" src="./images/youtube.png" /></a>
+              <a href="#"><img class="mh-100" src="<?= base_url('../../public/assets/images/twitter.png') ?>" /></a>
+              <a href="#"><img class="mh-100" src="<?= base_url('../../public/assets/images/youtube.png') ?>" /></a>
             </div>
           </div>
         </div>
