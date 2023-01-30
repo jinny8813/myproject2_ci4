@@ -37,12 +37,6 @@
         <li class="nav-item ">
         <a class="nav-link py-3" href="./bulletinboard.php">嶼之公告欄</a>
         </li>
-        <?php if(isset($_SESSION['id']) || isset($_SESSION['logged in'])){ ?>
-            <li class="nav-item"> <a href="./individual.php" class="nav-link py-3"> 我的筆記本 </a></li>
-            <li class="nav-item"> <a href="./logout.php" class="nav-link py-3"> 登出 </a></li>
-            <?php  }else{ ?>
-            <li class="nav-item"> <a href="./login.php" class="nav-link py-3" >登入</a></li>
-                <?php } ?>
       </ul>
     </nav>
 	</header>

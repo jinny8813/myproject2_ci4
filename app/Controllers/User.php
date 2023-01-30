@@ -6,6 +6,6 @@ class User extends BaseController
 {
     public function index()
     {
-        return view('layouts/template');
+        return view('pages/home');
     }
 }

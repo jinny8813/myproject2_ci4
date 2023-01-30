@@ -20,8 +20,8 @@
     ></script>
 </head>
 <body>
-    <?= $this->include("messageboard/layouts/nav")?>
+    <?= $this->include("layouts/nav")?>
     <?= $this->renderSection("content")?>
-    <?= $this->include("messageboard/layouts/footer")?>
+    <?= $this->include("layouts/footer")?>
 </body>
 </html>
