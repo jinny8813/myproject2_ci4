@@ -49,7 +49,7 @@
                 ?>
             <div class="text-center row justify-content-center py-5">
                 <p class="text-center col-12">還沒有帳號嗎?現在就註冊一個吧!</p>
-                <a href="./register.php" class="btn btn-primary col-2">註冊</a>
+                <a href="<?php echo base_url('User/register') ?>" class="btn btn-primary col-2">註冊</a>
             </div>
         </div>
         </div>

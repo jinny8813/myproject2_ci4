@@ -40,7 +40,7 @@
         <a class="nav-link py-3" href="<?php echo site_url('User/board') ?>">嶼之公告欄</a>
         </li>
         <li class="nav-item ">
-        <a class="nav-link py-3" href="<?= isset($this->memberData)? base_url('User/personal'):base_url('User/login')?>"><?= isset($this->memberData)? esc('我的筆記本'):'登入與註冊'?></a>
+        <a class="nav-link py-3" href="<?= isset($nickname)? base_url('User/personal'):base_url('User/login')?>"><?= isset($nickname)? '我的筆記本':'登入與註冊'?></a>
         </li>
       </ul>
     </nav>

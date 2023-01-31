@@ -3,15 +3,12 @@
     <section>
       <div class="row m-0 g-0">
         <div class="col-sm-3 py-5 bg_one">
-        <?php
-            $temp=$_SESSION['email'];
-            $username=strstr($temp, '@', true);
-            echo "<h3 class='text-center mb-3'>".$username."</h3>";
-        ?>
+            <h3 class='text-center mb-3'><?= esc($nickname)?></h3>
             <nav class="nav flex-column">
                 <a class="nav-link px-5" href="#">主頁筆記</a>
                 <a class="nav-link px-5" href="#">我的收藏</a>
                 <a class="nav-link px-5" href="#">個人資料</a>
+                <a class="nav-link px-5" href="<?php echo base_url('User/doLogout') ?>">登出</a>
             </nav>
         </div>
         <div class="col-sm-9 p-5 bg_two">
