@@ -25,19 +25,22 @@
 	<header>
     <nav class="navbar">
       <div class="img_h">
-        <a class="navbar-brand px-5 py-3" href="./index.php"
+        <a class="navbar-brand px-5 py-3" href="<?php echo site_url('User') ?>"
           ><img src="<?= base_url('../../public/assets/images/icon.png') ?>" class="h-100 px-2" />BluegaJournal 白鯨嶼 
         </a>
       </div>
       <ul class="nav justify-content-end">
         <li class="nav-item ">
-        <a class="nav-link py-3 " href="./bloghome.php">雜學探險徑</a>
+        <a class="nav-link py-3 " href="<?php echo site_url('User/bloghome') ?>">雜學探險徑</a>
         </li>
         <li class="nav-item ">
-        <a class="nav-link py-3" href="./source.php">補給充電站</a>
+        <a class="nav-link py-3" href="<?php echo site_url('User/source') ?>">補給充電站</a>
         </li>
         <li class="nav-item ">
-        <a class="nav-link py-3" href="./bulletinboard.php">嶼之公告欄</a>
+        <a class="nav-link py-3" href="<?php echo site_url('User/board') ?>">嶼之公告欄</a>
+        </li>
+        <li class="nav-item ">
+        <a class="nav-link py-3" href="<?= isset($this->memberData)? base_url('User/personal'):base_url('User/login')?>"><?= isset($this->memberData)? esc('我的筆記本'):'登入與註冊'?></a>
         </li>
       </ul>
     </nav>
