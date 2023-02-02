@@ -38,6 +38,14 @@ class User extends BaseController
             return view('pages/board');
         }
     }
+    public function personal()
+    {
+        if($this->isLogin()){
+            return view('pages/personal',$this->memberData);
+        }else{
+            return view('pages/login');
+        }
+    }
     public function login()
     {
         if($this->isLogin()){
