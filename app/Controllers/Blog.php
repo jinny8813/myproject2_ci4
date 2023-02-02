@@ -18,6 +18,7 @@ class Blog extends BaseController
             return view('pages/bloghome',$data);
         }
     }
+
     public function createBlog()
     {
         if($this->isLogin()){
@@ -69,6 +70,23 @@ class Blog extends BaseController
             $blogModel = new BlogModel();
             $data['blogs'] = $blogModel->find($id);
             return view('pages/bloghome',$data);
+        }
+    }
+
+    public function personal()
+    {
+        if($this->isLogin()){
+            $blogModel = new BlogModel();
+            $data['blogs'] = $blogModel->where('authorId', $this->memberData['userId'])->orderBy('id', 'DESC')->findAll();
+            if($data){
+                return view('pages/personal',array_merge($this->memberData,$data));
+            }else{
+                $err=['error_messages'=>"尚未發表文章",
+                'status_code'=>400];
+                return view('pages/personal',array_merge($this->memberData,$err));
+            }
+        }else{
+            return view('pages/login');
         }
     }
 }

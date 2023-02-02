@@ -41,7 +41,7 @@ class User extends BaseController
     public function personal()
     {
         if($this->isLogin()){
-            return view('pages/personal',$this->memberData);
+            return redirect()->to(base_url('Blog/personal'));
         }else{
             return view('pages/login');
         }
@@ -68,7 +68,7 @@ class User extends BaseController
         if($this->isLogin()){
             $err=['error_messages'=>"已登入",
             'status_code'=>403];
-            return view('pages/personal',array_merge($this->memberData,$err));
+            return redirect()->to(base_url('Blog/personal'));
             //return $this->fail("已登入",403);
         }
 
@@ -87,7 +87,7 @@ class User extends BaseController
         if($memberData){
             $this->session->set("memberData",$memberData);
             $this->response->setStatusCode(200);
-            return view('pages/personal',$memberData);
+            return redirect()->to(base_url('Blog/personal'));
             return $this->response->setJSON([
                 "msg" => "OK"
             ]);

@@ -25,6 +25,12 @@
             </div>
             <div class="p-5">
 
+            <?php 
+                if(isset($error_messages)){
+                    echo '<h5 class="text-center pb-5 mb-3">' . esc($error_messages) . '</h5>';
+                }        
+                ?>
+                
             <?php foreach($blogs as $row):?>
             <div class="card mb-5 mx-5">
                 <div class="row g-0">
