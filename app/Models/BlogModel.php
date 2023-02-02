@@ -9,4 +9,5 @@ class BlogModel extends Model
 
     protected $allowedFields = ['id','authorId','category','title', 'content','createdAt'];
 
+    
 }

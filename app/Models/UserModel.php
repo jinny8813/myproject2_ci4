@@ -11,7 +11,6 @@ class UserModel extends Model
     {
         $memberData = $this->asArray()
                             ->where(['email' => $email,'password' =>$password])
-                            //->where(['account' => $account,'password' => $password])
                             ->first();
 
         return $memberData ?? false;

@@ -9,9 +9,13 @@ class Blog extends BaseController
     public function index()
     {
         if($this->isLogin()){
-            return view('pages/bloghome',$this->memberData);
+            $blogModel = new BlogModel();
+            $data['blogs'] = $blogModel->orderBy('id', 'DESC')->findAll();
+            return view('pages/bloghome',array_merge($this->memberData,$data)); 
         }else{
-            return view('pages/bloghome');
+            $blogModel = new BlogModel();
+            $data['blogs'] = $blogModel->orderBy('id', 'DESC')->findAll();
+            return view('pages/bloghome',$data);
         }
     }
     public function createBlog()
@@ -19,7 +23,7 @@ class Blog extends BaseController
         if($this->isLogin()){
             return view('pages/createblog',$this->memberData);
         }else{
-            return view('pages/createblog');
+            return view('pages/login');
         }
     }
 
@@ -53,5 +57,18 @@ class Blog extends BaseController
         }else{
             return view('pages/login');
         }                
+    }
+
+    public function showMore($id)
+    {
+        if($this->isLogin()){
+            $blogModel = new BlogModel();
+            $data['blogs'] = $blogModel->find($id);
+            return view("pages/singleblog",array_merge($this->memberData,$data)); 
+        }else{
+            $blogModel = new BlogModel();
+            $data['blogs'] = $blogModel->find($id);
+            return view('pages/bloghome',$data);
+        }
     }
 }

@@ -17,9 +17,9 @@ class User extends BaseController
     public function bloghome()
     {
         if($this->isLogin()){
-            return view('pages/bloghome',$this->memberData);
+            return redirect()->to(base_url('Blog'));
         }else{
-            return view('pages/bloghome');
+            return redirect()->to(base_url('Blog'));
         }
     }
     public function source()

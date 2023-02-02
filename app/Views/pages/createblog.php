@@ -34,7 +34,7 @@
                                 <label for="authorID">作者ID</label>
                             </div>
                             <div class="col-8">
-                                <input type="text" name="authorID" id="authorID" class="form-control" disabled value="<?= esc($id)?>">
+                                <input type="text" name="authorID" id="authorID" class="form-control" disabled value="<?= esc($userId)?>">
                             </div>
                         </div>
                         <div class="form-group row mb-3">
