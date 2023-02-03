@@ -20,8 +20,8 @@
             <h3 class="text-center pt-5 mb-3" id="changeTitle">全部筆記</h3>
             <div class="px-5 mx-5">
                 <a href="<?= base_url('Blog/createBlog')?>" class="btn btn-primary mx-3">我要發文</a>
-                <a href="<?= base_url('Blog/create')?>" class="btn btn-primary mx-3 float-end">熱門文章</a>
-                <a href="<?= base_url('Blog/create')?>" class="btn btn-primary mx-3 float-end">最新文章</a>
+                <a href="<?= base_url('Blog')?>" class="btn btn-primary mx-3 float-end">熱門文章</a>
+                <a href="<?= base_url('Blog')?>" class="btn btn-primary mx-3 float-end">最新文章</a>
             </div>
             <div class="p-5">
 
@@ -30,7 +30,7 @@
                     echo '<h5 class="text-center pb-5 mb-3">' . esc($error_messages) . '</h5>';
                 }        
                 ?>
-                
+
             <?php foreach($blogs as $row):?>
             <div class="card mb-5 mx-5">
                 <div class="row g-0">

@@ -28,8 +28,8 @@
             <div class="p-5 mx-5">
                 <a href="<?= $_SERVER['HTTP_REFERER']?>" class="btn btn-primary mx-3">返回上一頁</a>
                 <?php if($userId==$blogs['authorId']){?>
-                    <a href="#" class="btn btn-primary mx-3 float-end">編輯文章</a>
-                    <a href="#" class="btn btn-primary mx-3 float-end">刪除文章</a>
+                    <a href="<?= base_url('Blog/delete/'.$blogs['id'])?>" class="btn btn-primary mx-3 float-end">刪除文章</a>
+                    <a href="<?= base_url('Blog/editBlog/'.$blogs['id'])?>" class="btn btn-primary mx-3 float-end">編輯文章</a>
                 <?php }?>
             </div>
         </div>
